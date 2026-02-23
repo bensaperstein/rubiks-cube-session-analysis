@@ -16,7 +16,7 @@ This project analyzes 16,000+ Rubik’s Cube solves collected from cstimer.net t
 
 ## Methods
 - Data cleaning and feature engineering in Python (Pandas)
-- Exploratory data analysis and visualization
+- Exploratory data analysis and visualization (Matplotlib/Seaborn)
 - Correlation analysis
 
 ## Files
