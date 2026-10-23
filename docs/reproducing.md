@@ -2,7 +2,7 @@
 
 ## View saved outputs
 
-Open notebook links from the README to inspect saved figures, tables and narrative. Download existing `fall-2025-report.html` and `fall-2025-code.html` from `fall-2025-stat303-1/` to view them locally. No dataset is needed to read saved outputs.
+Open notebook links from the README to inspect saved figures, tables and narrative. Download the term-labeled report/code HTML files from either course folder to view them locally. Winter HTML exports were generated from saved notebook outputs without executing the analysis; the report hides code inputs while the code export displays them. No dataset is needed to read saved outputs.
 
 ## Suggested environment
 
