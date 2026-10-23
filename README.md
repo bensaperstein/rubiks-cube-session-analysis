@@ -41,7 +41,7 @@ I chose the research questions around my own solving history, interpreted result
 | Term and course | Report | Code | HTML exports |
 | --- | --- | --- | --- |
 | **Fall 2025 · STAT 303-1** | [Fall report](fall-2025-stat303-1/fall-2025-report.ipynb) | [Fall code](fall-2025-stat303-1/fall-2025-code.ipynb) | [Report](fall-2025-stat303-1/fall-2025-report.html) · [Code](fall-2025-stat303-1/fall-2025-code.html) |
-| **Winter 2026 · STAT 303-2** | [Winter report](winter-2026-stat303-2/winter-2026-report.ipynb) | [Winter code](winter-2026-stat303-2/winter-2026-code.ipynb) | Not included |
+| **Winter 2026 · STAT 303-2** | [Winter report](winter-2026-stat303-2/winter-2026-report.ipynb) | [Winter code](winter-2026-stat303-2/winter-2026-code.ipynb) | [Report](winter-2026-stat303-2/winter-2026-report.html) · [Code](winter-2026-stat303-2/winter-2026-code.html) |
 
 The **report** presents the questions, findings and interpretation; the **code** notebook contains the implementation. Each term has its own folder and date-labeled filenames. Setup and execution details are in [reproduction instructions](docs/reproducing.md).
 
