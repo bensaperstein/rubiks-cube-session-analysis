@@ -1,26 +1,49 @@
-# Virtual Rubik’s Cube Session Analysis
+# Virtual Rubik’s Cube Performance Analysis
 
-## Overview
-This project analyzes 16,000+ Rubik’s Cube solves collected from cstimer.net to identify the key factors that influence solve time and performance trends over time.
+**Ben Saperstein · Northwestern University · STAT 303-1 & STAT 303-2**
 
-## Key Questions
-- Which variables are most strongly associated with solve time?
-- How has performance evolved over time?
-- Are there trends based on time of day or day of week?
+What can five years of my virtual Rubik’s Cube solves reveal about performance? These two course projects examine my own keyboard-controlled solves on [csTimer](https://cstimer.net), from exploratory analysis to regression and regularization.
 
-## Key Findings
-- Longest pause during a solve is the strongest predictor of solve time
-- Performance improved rapidly early on, then plateaued
-- Solve frequency is lowest in mornings and weekends
-- Time of day has a modest effect on performance
+**Draft update:** regression notebooks and a preview chart are prepared locally and await upload approval. This branch adds documentation and preserves the existing exploratory artifacts.
 
-## Methods
-- Data cleaning and feature engineering in Python (Pandas)
-- Exploratory data analysis and visualization (Matplotlib/Seaborn)
-- Correlation analysis
+## Start here
 
-## Files
-- `report.ipynb` – final project report
-- `report.html` – final project report
-- `code.ipynb` – all code used in the analysis
-- `code.html` – all code used in the analysis
+- **[Project overview](docs/project-overview.md)** — questions, methods, findings and limitations.
+- **[Exploratory report](report.ipynb)** — STAT 303-1, Fall 2025; saved charts and interpretation.
+- **Regression extension (upload pending)** — STAT 303-2, Winter 2026; eight linear specifications and a polynomial Ridge model.
+- **[Validation notes](docs/methods-and-limitations.md)** — how to interpret the original results and what a stronger evaluation requires.
+
+## At a glance
+
+| Stage | Dataset | Approach |
+| --- | --- | --- |
+| Exploratory analysis | 16,856 solves before cleaning; 16,776 after removing 80 observations; 14 variables | Correlations, learning trends, weekday and time-of-day comparisons |
+| Regression analysis | 22,442 solves; 15 variables; 17,953 training / 4,489 test observations | Eight expanded linear models, then degree-2 polynomial Ridge regression with five-fold cross-validation |
+
+Both stages use overlapping snapshots of the same personal session, beginning in December 2020. Their counts should **not** be added together. These are virtual solves, distinct from my physical WCA competition results.
+
+## Findings and interpretation
+
+- The exploratory report associates longer pauses with slower solves and shows rapid early improvement followed by a slower, uneven learning curve.
+- The regression project compares nine specifications and examines how movement, pauses and temporal features relate to solve time.
+- These are observational relationships from one solver. They do not establish that a practice intervention causes improvement or generalize automatically to other cubers.
+
+**Model interpretation matters:** original models 2–9 use `turn_speed_tps = number_of_turns / solve_time_s`. Because that feature contains the target, their test scores are not valid evidence of predicting an unknown solve time. Several other features are available only after a solve. Original course outputs are retained; the [validation notes](docs/methods-and-limitations.md) explain the issue. A corrected evaluation has not yet been run.
+
+## My contribution
+
+I chose the research questions around my own solving history, interpreted results, and developed the course analyses and reports. With instructor permission, I used AI assistance to parse the nested csTimer export and compute movement metrics. The original reports disclose that assistance. Later portfolio documentation clarifies scope and limitations; it does not represent a new completed model experiment.
+
+## Files and reproduction
+
+| File | Purpose |
+| --- | --- |
+| [report.ipynb](report.ipynb) / [report.html](report.html) | Original exploratory report with saved outputs |
+| [code.ipynb](code.ipynb) / [code.html](code.html) | Original exploratory code |
+| Regression report (upload pending) | Prepared with original results and a portfolio context note |
+| Regression code (upload pending) | Prepared implementation and original saved results |
+| [Reproduction instructions](docs/reproducing.md) | Environment, input requirements and execution constraints |
+
+GitHub displays notebooks and their saved outputs without executing them. To view existing HTML reports as rendered pages, download and open them locally.
+
+Use Python 3.12 or newer and [requirements.txt](requirements.txt). The original `cstimer_data.txt` export is **not included**. This repository currently supports inspection of saved analysis, not complete fresh reproduction; see the reproduction instructions before running it.
