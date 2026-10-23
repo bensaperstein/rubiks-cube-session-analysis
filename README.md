@@ -4,13 +4,11 @@
 
 What can five years of my virtual Rubik’s Cube solves reveal about performance? These two course projects examine my own keyboard-controlled solves on [csTimer](https://cstimer.net), from exploratory analysis to regression and regularization.
 
-**Draft update:** regression notebooks and a preview chart are prepared locally and await upload approval. This branch adds documentation and preserves the existing exploratory artifacts.
-
 ## Start here
 
 - **[Project overview](docs/project-overview.md)** — questions, methods, findings and limitations.
 - **[Exploratory report](report.ipynb)** — STAT 303-1, Fall 2025; saved charts and interpretation.
-- **Regression extension (upload pending)** — STAT 303-2, Winter 2026; eight linear specifications and a polynomial Ridge model.
+- **[Regression report](notebooks/regression-report.ipynb)** — STAT 303-2, Winter 2026; eight linear specifications and a polynomial Ridge model.
 - **[Validation notes](docs/methods-and-limitations.md)** — how to interpret the original results and what a stronger evaluation requires.
 
 ## At a glance
@@ -30,6 +28,10 @@ Both stages use overlapping snapshots of the same personal session, beginning in
 
 **Model interpretation matters:** original models 2–9 use `turn_speed_tps = number_of_turns / solve_time_s`. Because that feature contains the target, their test scores are not valid evidence of predicting an unknown solve time. Several other features are available only after a solve. Original course outputs are retained; the [validation notes](docs/methods-and-limitations.md) explain the issue. A corrected evaluation has not yet been run.
 
+![Learning curve from the exploratory course report](assets/learning-curve.png)
+
+*Original STAT 303-1 plot; this earlier dataset is smaller than the regression snapshot.*
+
 ## My contribution
 
 I chose the research questions around my own solving history, interpreted results, and developed the course analyses and reports. With instructor permission, I used AI assistance to parse the nested csTimer export and compute movement metrics. The original reports disclose that assistance. Later portfolio documentation clarifies scope and limitations; it does not represent a new completed model experiment.
@@ -40,8 +42,8 @@ I chose the research questions around my own solving history, interpreted result
 | --- | --- |
 | [report.ipynb](report.ipynb) / [report.html](report.html) | Original exploratory report with saved outputs |
 | [code.ipynb](code.ipynb) / [code.html](code.html) | Original exploratory code |
-| Regression report (upload pending) | Prepared with original results and a portfolio context note |
-| Regression code (upload pending) | Prepared implementation and original saved results |
+| [notebooks/regression-report.ipynb](notebooks/regression-report.ipynb) | Regression report, original results and a portfolio context note |
+| [notebooks/regression-code.ipynb](notebooks/regression-code.ipynb) | Regression implementation and original saved results |
 | [Reproduction instructions](docs/reproducing.md) | Environment, input requirements and execution constraints |
 
 GitHub displays notebooks and their saved outputs without executing them. To view existing HTML reports as rendered pages, download and open them locally.
