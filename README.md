@@ -7,8 +7,8 @@ What can five years of my virtual Rubik’s Cube solves reveal about performance
 ## Start here
 
 - **[Project overview](docs/project-overview.md)** — questions, methods, findings and limitations.
-- **[Exploratory report](report.ipynb)** — STAT 303-1, Fall 2025; saved charts and interpretation.
-- **[Regression report](notebooks/regression-report.ipynb)** — STAT 303-2, Winter 2026; eight linear specifications and a polynomial Ridge model.
+- **[Fall 2025 report — exploratory analysis](fall-2025-stat303-1/fall-2025-report.ipynb)** — STAT 303-1, Fall 2025; saved charts and interpretation.
+- **[Winter 2026 report — regression analysis](winter-2026-stat303-2/winter-2026-report.ipynb)** — STAT 303-2, Winter 2026; eight linear specifications and a polynomial Ridge model.
 - **[Validation notes](docs/methods-and-limitations.md)** — how to interpret the original results and what a stronger evaluation requires.
 
 ## At a glance
@@ -38,13 +38,12 @@ I chose the research questions around my own solving history, interpreted result
 
 ## Files and reproduction
 
-| File | Purpose |
-| --- | --- |
-| [report.ipynb](report.ipynb) / [report.html](report.html) | Original exploratory report with saved outputs |
-| [code.ipynb](code.ipynb) / [code.html](code.html) | Original exploratory code |
-| [notebooks/regression-report.ipynb](notebooks/regression-report.ipynb) | Regression report, original results and a portfolio context note |
-| [notebooks/regression-code.ipynb](notebooks/regression-code.ipynb) | Regression implementation and original saved results |
-| [Reproduction instructions](docs/reproducing.md) | Environment, input requirements and execution constraints |
+| Term and course | Report | Code | HTML exports |
+| --- | --- | --- | --- |
+| **Fall 2025 · STAT 303-1** | [Fall report](fall-2025-stat303-1/fall-2025-report.ipynb) | [Fall code](fall-2025-stat303-1/fall-2025-code.ipynb) | [Report](fall-2025-stat303-1/fall-2025-report.html) · [Code](fall-2025-stat303-1/fall-2025-code.html) |
+| **Winter 2026 · STAT 303-2** | [Winter report](winter-2026-stat303-2/winter-2026-report.ipynb) | [Winter code](winter-2026-stat303-2/winter-2026-code.ipynb) | Not included |
+
+The **report** presents the questions, findings and interpretation; the **code** notebook contains the implementation. Each term has its own folder and date-labeled filenames. Setup and execution details are in [reproduction instructions](docs/reproducing.md).
 
 GitHub displays notebooks and their saved outputs without executing them. To view existing HTML reports as rendered pages, download and open them locally.
 
